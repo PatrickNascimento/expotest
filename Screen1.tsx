@@ -1,57 +1,57 @@
 import React from 'react';
-import { StyleSheet, View, ScrollView } from 'react-native';
+import { StyleSheet, View, ScrollView, Text } from 'react-native';
 import { VideoCard } from './components';
+
+const numCards = 6; 
+
+const renderVideoCards = () => {
+  const cards = [];
+  for (let i = 0; i < numCards; i++) {
+    cards.push(<VideoCard key={i} />);
+  }
+  return cards;
+};
 
 const Screen1 = () => {
   return (
+    <>
+    <View style={{ margin: 12, marginBottom:2 }}><Text> Welcome </Text></View>
     <ScrollView>
-      {/* ScrollView horizontal 1 */}
       <ScrollView horizontal>
         <View style={{ flex: 1, flexDirection: 'row' }}>
-          <View style={styles.container}>
-            <VideoCard />            
-          </View>
+          {renderVideoCards()}
         </View>
       </ScrollView>
 
-      {/* ScrollView horizontal 2 */}
+
       <ScrollView horizontal>
         <View style={{ flex: 1, flexDirection: 'row' }}>
-         <VideoCard />
+          {renderVideoCards()}
         </View>
       </ScrollView>
 
-      {/* ScrollView horizontal 3 */}
+
       <ScrollView horizontal>
         <View style={{ flex: 1, flexDirection: 'row' }}>
-          {/* Conteúdo do ScrollView horizontal 3 */}
+          {renderVideoCards()}
         </View>
       </ScrollView>
 
-      {/* ScrollView horizontal 4 */}
+
       <ScrollView horizontal>
         <View style={{ flex: 1, flexDirection: 'row' }}>
-          {/* Conteúdo do ScrollView horizontal 4 */}
+          {renderVideoCards()}
         </View>
       </ScrollView>
 
-      {/* ScrollView horizontal 5 */}
+
       <ScrollView horizontal>
         <View style={{ flex: 1, flexDirection: 'row' }}>
-          {/* Conteúdo do ScrollView horizontal 5 */}
+          {renderVideoCards()}
         </View>
       </ScrollView>
-    </ScrollView>
+    </ScrollView></>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#f5f5f5',
-  },
-});
 
 export default Screen1;

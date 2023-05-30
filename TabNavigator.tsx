@@ -17,8 +17,8 @@ const Tab = createBottomTabNavigator();
 const TabNavigator = () => {
   const getTabBarIcon = (route: string, focused: boolean, color: string, size: number) => {
     const iconNames: { [key: string]: string } = {
-      Tab1: 'home',
-      Tab2: 'settings',
+      Video: 'play',
+      Posts: 'message-circle',
     };
 
     const iconName = iconNames[route];
@@ -42,8 +42,8 @@ const TabNavigator = () => {
     <Tab.Navigator
       screenOptions={screenOptions}
     >
-      <Tab.Screen name="Tab1" component={Screen1} />
-      <Tab.Screen name="Tab2" component={Screen2} />
+      <Tab.Screen name="Video" component={Screen1} />
+      <Tab.Screen name="Posts" component={Screen2} />
     </Tab.Navigator>
   );
 };

@@ -1,6 +1,6 @@
-import React from 'react';
-import {View, ScrollView, Text } from 'react-native';
-import { VideoCard } from './components';
+import React from "react";
+import { View, ScrollView, Text } from "react-native";
+import { VideoCard } from "./components";
 
 const numCards = 6;
 
@@ -20,31 +20,31 @@ const Screen1: React.FC = () => {
       </View>
       <ScrollView>
         <ScrollView horizontal>
-          <View style={{ flex: 1, flexDirection: 'row' }}>
+          <View style={{ flex: 1, flexDirection: "row" }}>
             {renderVideoCards()}
           </View>
         </ScrollView>
 
         <ScrollView horizontal>
-          <View style={{ flex: 1, flexDirection: 'row' }}>
+          <View style={{ flex: 1, flexDirection: "row" }}>
             {renderVideoCards()}
           </View>
         </ScrollView>
 
         <ScrollView horizontal>
-          <View style={{ flex: 1, flexDirection: 'row' }}>
+          <View style={{ flex: 1, flexDirection: "row" }}>
             {renderVideoCards()}
           </View>
         </ScrollView>
 
         <ScrollView horizontal>
-          <View style={{ flex: 1, flexDirection: 'row' }}>
+          <View style={{ flex: 1, flexDirection: "row" }}>
             {renderVideoCards()}
           </View>
         </ScrollView>
 
         <ScrollView horizontal>
-          <View style={{ flex: 1, flexDirection: 'row' }}>
+          <View style={{ flex: 1, flexDirection: "row" }}>
             {renderVideoCards()}
           </View>
         </ScrollView>
